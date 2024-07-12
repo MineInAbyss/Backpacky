@@ -1,0 +1,6 @@
+[versions]
+gearyPaper = "0.30.5"
+
+[libraries]
+geary-papermc = { module = "com.mineinabyss:geary-papermc", version.ref = "gearyPaper" }
+triumph-gui = "dev.triumphteam:triumph-gui:3.1.10"

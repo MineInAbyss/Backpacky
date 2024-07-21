@@ -59,7 +59,7 @@ class BackpackListener : Listener {
 
         val (item, gearyItem) = (item ?: return) to (item?.toGearyOrNull() ?: return)
         val backpack = gearyItem.get<Backpack>() ?: return
-        val backpackContent = gearyItem.getOrSetPersisting { BackpackContent() }
+        val backpackContent = gearyItem.getOrSetPersisting<BackpackContent> { BackpackContent() }
         val title = backpack.title ?: item.itemMeta?.displayName().takeIf { item.itemMeta.hasDisplayName() }
         ?: item.itemMeta.itemName()
 
